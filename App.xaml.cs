@@ -7,6 +7,6 @@ namespace WeatherApp
     /// </summary>
     public partial class App : Application
     {
-        public const string ApiKey = "tMvLfBOiD78iSGGNhyEOv9dHVwjwGLc5";
+        
     }
 }
