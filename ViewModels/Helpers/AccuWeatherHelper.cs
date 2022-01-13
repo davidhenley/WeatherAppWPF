@@ -28,7 +28,10 @@ namespace WeatherApp.ViewModels
         {
             using var client = new HttpClient();
 
-            return (await client.GetFromJsonAsync<List<CurrentCondition>>(GetConditionsUrl(cityKey))).FirstOrDefault();
+            var conditionsList = await client.GetFromJsonAsync<List<CurrentCondition>>(GetConditionsUrl(cityKey));
+            var condition = conditionsList.FirstOrDefault();
+
+            return condition;
         }
     }
 }
